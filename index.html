@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./assets/style.css"/>
 </head>
 <body>
-    <header id="top">
+    <header>
         <h1>
             <a href="/"></a>Derek Brimhall</h1>
             <!-- nav bar unordered list element-->
@@ -26,9 +26,9 @@
         </nav>
     </header>
     <!-- Hero section-->
-    <section  class="hero">
-        <article>
-            <div id="about-me" class="hero-text">
+    <section class="hero">
+        <article id="about-me">
+            <div class="hero-text">
                 <h2>About Me</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident incidunt quibusdam possimus saepe doloribus repudiandae nam esse? Nesciunt corporis voluptatem impedit aut reprehenderit doloribus alias aspernatur. Delectus hic odit laudantium.
@@ -38,15 +38,23 @@
     </section>
 
     <!-- my projects section-->
-    <section id="my-projects" class="projects">
-        <h2>My Projects</h2>
-            <div class="run-buddy">
-                <a href="https://billy4c.github.io/run-buddy/">
-                    <img alt="Run Buddy landing page" src="assets/images/Screen Shot 2020-08-05 at 9.00.14 PM.png">
-            </div>
-            <div>
-                Horiseon
-            </div>
+    <section id="my-projects">
+        <div class="projects">
+            <h2>My Projects</h2>
+            <h3>Run Buddy Fitness Training</h3>
+                <div class="run-buddy">
+                    <a href="https://billy4c.github.io/run-buddy/">
+                        <img alt="Run Buddy landing page" src="./assets/images/Screen Shot 2020-08-05 at 9.00.14 PM.jpeg">
+                        </a>
+                </div>
+        
+            <h3>Horiseon Search Engine Optimization</h3>
+                <div class="project-name">
+                    <a href="https://billy4c.github.io/Challenge1/">
+                        <img alt ="Horiseon nav bar" src="./assets/images/Screen Shot 2020-08-06 at 11.50.54 AM.png">
+                        </a>
+                </div>
+        </div>
     </section>
 
 <!-- contact info section-->
@@ -69,7 +77,7 @@
     
     <footer>
         <div>
-            <h2><a href="#top">Back to the top</a></h2>
+            <h2><a href="#about-me">Back to the top</a></h2>
         </div>
 
     </footer>
