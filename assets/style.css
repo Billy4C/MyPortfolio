@@ -19,7 +19,7 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     background-color:var(--primary-color);
-    padding: 20px 35px;
+    padding: 35px 35px;
     position: sticky;
     position:-webkit-sticky;
     z-index: 9999;
@@ -59,4 +59,96 @@ header nav ul li a {
 header nav ul li a:hover {
     color: var(--tertiary-color);
     border-radius: 5px;
+}
+
+.hero {
+    display: flex;
+    background-image: url("./images/IMG_3360_Original\ 6.52.13\ PM.JPG");
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: 100%;
+    flex-wrap: wrap;
+    padding: 250px;
+    color: var(--primary-color);
+}
+
+.hero-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 25px;
+    background-color: var(--tertiary-color);
+    border-style: inset;
+    border-color: var(--primary-color);
+    text-align: left;
+    margin-left: 50%;
+}
+.hero-text p {
+    color: var(--primary-color);
+}
+
+
+#contact-info {
+    background-color: var(--primary-color);
+}
+
+#contact-info a {
+    color: var(--secondary-color);
+    font-style: italic;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+#contact-info a:hover {
+    color:yellow;
+}
+
+#contact-info h2, p {
+    color: var(--tertiary-color);
+}
+
+#contact-info p {
+    text-decoration: none;
+    color: var(--tertiary-color);
+}
+
+.projects h2{
+    background-color: var(--primary-color);
+}
+.projects img {
+    width: 100%;
+    background-size:cover;
+}
+
+.run-buddy {
+    display:flex;
+    padding: 50px;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: top;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+
+    
+
+
+
+
+
+
+footer {
+    background-color: var(--tertiary-color);
+    padding: 15px;
+
+}
+
+footer h2 a{
+    color: var(--primary-color);
+    display:flex;
+    justify-content: center;
+    text-shadow: 1px 1px 1px black;
+    text-decoration: none;
+
 }
