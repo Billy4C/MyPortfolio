@@ -24,8 +24,8 @@ header {
     background-image: fixed;
     background-position: 100%;
     padding: 35px 35px;
-    position: sticky;
-    position:-webkit-sticky;
+    /*position: sticky;
+    position:-webkit-sticky;*/
     z-index: 9999;
     top: 0;
     color: var(--lighter);
@@ -69,29 +69,27 @@ header nav ul li a:hover {
 .hero {
     display: flex;
     background-image: url("./images/IMG_3360_Original\ 6.52.13\ PM.JPG");
-    background-attachment: scroll;
+    /* background-attachment: scroll; */
     background-size: cover;
     background-position: 100%;
-    flex-wrap: wrap;
     padding: 250px;
+    justify-content: flex-end;
+    position: relative;
 }
 
 .hero-text {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    padding: 25px;
-    background-color: var(--tertiary-color);
+    position: absolute;
+    left: 100px;
+    background-color: var(--background);
     border-style: inset;
-    border-color: var(--primary-color);
-    text-align: left;
-    margin-left: 50%;
-}
-.hero-text p {
-    color: var(--primary-color);
+    border-color: var(--darker);
+    top: 100px;
+    left: 0;
+    width: 200px;
+    height: auto;
 }
 
-#about-me {
+#about-me, #work, #contact-me {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -99,42 +97,56 @@ header nav ul li a:hover {
     flex-flow: row ;
 }
 
-.flex-row h2 {
+.section-title {
+    font-size: 50px;
     display:flex;
     padding-right: 15px;
     padding-left: 50px;
     justify-content: flex-end;
+    align-items: flex-start;
     text-align: right;
-   
+    width: 200px;
 }
-.flex-row p{
+
+.section-text {
+    border-left: 4px solid var(--darker);
+    height: 150px;
+}
+.flex-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+}
+
+.flex-row p {
     display:flex;
     padding: 0 30px;
     border-left: solid 4px var(--darker);
-    width: auto;
+    align-items: flex-start;
 }
 
-#work {
-    display: flex;
-    flex-wrap: wrap;
-    flex-flow: row;
-    padding: 30px;
-}
-
+/* grid */
 .work-grid-wrapper {
+    /* display: grid;
+    flex-flow: row; */
     border: 4px;
-    width: 100%;
-    flex-wrap: wrap;
-    box-sizing: content-box;
+    /* flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: flex-end;
+    align-items: flex-start; */
+    border-left: 4px solid var(--darker);
     
 }
 .work-grid-container {
     display: grid;
     grid-gap: 20px;
-    grid-auto-flow: dense;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr); 
-    padding: 0 30px;
+    margin: 10px;
+    grid-auto-flow: row dense;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr); 
+    padding: 0 10px;
+    border: 4px;
 
 }
 
@@ -142,37 +154,137 @@ header nav ul li a:hover {
     display: flex;
     border: 5px solid var(--lighter);
     flex-wrap: wrap;
-    
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: var(--darker);
+    background: var(--background)
+}
+
+
+
+.grid-item-text {
+    /* float: left; */
+    /* margin-top: 20px; */
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition-duration: 2s;
+}
+
+.grid-item-text:hover {
+    background-color: black;
+    opacity: .8;
 }
 
 .item-1 {
-    grid-column: 1 / span 4;
-    grid-row: 1 / span 4;
+    background-image: url("./images/Runbuddylanding.png");
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    /*background-image: url(./images/Screen\ Shot\ 2020-08-05\ at\ 9.00.14\ PM.jpeg);*/
+    background-size: cover;
+    position: relative;
+    /* display: flex; */
+    /*justify-content: flex-start;
+    align-items: flex-end;
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--darker);
+    background: var(--background)*/
 }
 
+.item-1 img {
+    display: block;
+    width: 100%;
+    min-height: 300px;
+    /* background-size: 100%; */
+}
+
+
+/*.item-1 h2, h3 {
+    display: flex;
+    padding: 0 15px;
+    position: relative;
+    background-color: var(--background);
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+*/
+
 .item-2 {
-    grid-column: 5 / span 2;
-    grid-row: 1 /span 2;
+    background-image: url("./images/Horiseon\ screenshot.png");
+    grid-column: 3 / span 1;
+    grid-row: 1 /span 1; 
+    position: relative;
+    background-size: cover;
+  
+}
+
+.item-2 img, .item-3 img, .item-4 img, .item-5 img{
+    width: 100%;
+    min-height: 150px;
+    display: block;
+
 }
 
 .item-3 {
-    grid-column: 5 / span 2;
-    grid-row: 3 /span 2;
+    background-image: url("./images/coming-soon-construction-yellow-background-design_1017-25509.jpg");
+    grid-column: 3 / span 1;
+    grid-row: 2 /span 1;
+    position: relative;
+    background-size: cover;
+
 }
 
+/*.item-3 img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+*/
+
 .item-4 {
-    grid-column: 1 / span 2;
-    grid-row: 5 / span 2;
+    background-image: url("./images/coming-soon-construction-yellow-background-design_1017-25509.jpg");
+    grid-column: 3 / span 1;
+    grid-row: 3 / span 1;
+    position: relative;
+    background-size: cover;
+
+
 }
 
 .item-5 {
-    grid-column: 3 / span 2;
-    grid-row: 5 / span 2;
+    background-image: url("./images/coming-soon-construction-yellow-background-design_1017-25509.jpg");
+    background-size: cover;
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+    position: relative;
+
 }
 
-.item-6 {
-    grid-column: 3 /span 2;
-    grid-row: 7 / span 2;
+.grid-text-float {
+    float: left;
+    margin-top: 20px;
 }
 
+/* end grid */
 
+
+/*#contact-me p {
+    display: flex;
+    padding: 30px;
+    font-size: 20px;
+    justify-content: space-around;
+}
+*/
+
+@media screen and(max-width: 800px) {
+    .work-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr); 
+        padding: 0 10px;
+    }
+
+}
