@@ -10,6 +10,7 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+
 }
 body {
     color:var(--darker);
@@ -92,67 +93,70 @@ header nav ul li a:hover {
     font-weight: bolder;
     width: 300px;
 }
+.hero-text h2 {
+    text-align: center;
+}
 
 #about-me, #work, #contact-me {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    padding:30px;
+    padding:50px;
     flex-flow: row ;
 }
-
-.section-title {
-    font-size: 50px;
-    display:flex;
-    padding-right: 15px;
-    padding-left: 50px;
-    justify-content: flex-end;
-    align-items: flex-start;
-    text-align: right;
-    width: 200px;
+h2 {
+    font-size: xx-large;
+    padding: 0 10px;
+   text-align: right;
 }
 
-.section-text {
-    border-left: 4px solid var(--darker);
-    height: 150px;
-}
-.flex-row {
+.personal-info {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-
-}
-
-.flex-row p {
-    display:flex;
-    padding: 0 30px;
-    border-left: solid 4px var(--darker);
-    align-items: flex-start;
-}
-
-/* grid */
-.work-grid-wrapper {
-    /* display: grid;
-    flex-flow: row; */
-    border: 4px;
-    /* flex-wrap: wrap;
-    box-sizing: border-box;
-    justify-content: flex-end;
-    align-items: flex-start; */
+    position: relative;
+    padding: 0 10px;
+    flex-wrap: wrap;
     border-left: 4px solid var(--darker);
-    
+    padding: 50px;
+    text-align: left;
+    width: 100%;
+    margin-right: -50px;
 }
+
 .work-grid-container {
     display: grid;
+    position: relative;
     grid-gap: 20px;
-    margin: 10px;
     grid-auto-flow: row dense;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr); 
-    padding: 0 10px;
-    border: 4px;
-
+    padding: 0 50px;
+    flex-wrap: wrap;
+    width: 80%;
+    border-left: 4px solid var(--darker);
+    justify-content: center;
+    text-decoration: none;
 }
+
+.item-text-main {
+    display:flex;
+    position: relative;
+    padding-right: 50px;
+    padding-left: 0px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 200px;
+    left: 0;
+    background-color: var(--background);
+    top: 75%;
+    text-decoration: none;
+}
+.item-text-main:hover {
+    font-weight: bold;
+}
+
+
+
 
 .grid-item {
     display: flex;
@@ -165,25 +169,6 @@ header nav ul li a:hover {
 }
 
 
-
-.grid-item-text {
-    /* float: left; */
-    /* margin-top: 20px; */
-    position: absolute;
-    left: 0;
-    bottom: 10px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    transition-duration: 2s;
-    background-color: var(--lighter);
-}
-
-.grid-item-text:hover {
-    background-color:white;
-    opacity: .8;
-}
-
 .item-1 {
     display: flex;
     background-image: url("./images/Runbuddylanding.png");
@@ -194,11 +179,12 @@ header nav ul li a:hover {
     display: block;
     width: 100%;
     min-height: 300px;
-    opacity: .5;
+    opacity: .8;
     transition-duration: 1s;
     background-color: var(--white);
     text-align: center;
     align-items: flex-end;
+    text-decoration: none;
 }
 
 .item-1:hover {
@@ -207,15 +193,15 @@ header nav ul li a:hover {
 }
 
 
-/*.item-1 h2, h3 {
-    display: flex;
-    padding: 0 15px;
-    position: relative;
-    background-color: var(--background);
-    justify-content: flex-start;
-    flex-wrap: wrap;
+.item-2, .item-3, .item-4, .item-5, .item-6 {
+    width: 100%;
+    min-height: 150px;
+    display: block;
+    opacity: .8;
+    transition-duration: 1s;
+    text-decoration: none;
 }
-*/
+
 
 .item-2 {
     background-image: url("./images/Horiseon\ screenshot.png");
@@ -223,23 +209,11 @@ header nav ul li a:hover {
     grid-row: 1 /span 1; 
     position: relative;
     background-size: cover;
-    opacity: .5;
-    transition-duration: 1s;
 }
 .item-2:hover {
     opacity: 1;
     background-color: none;
 }
-
-
-.item-2, .item-3, .item-4 img, .item-5 {
-    width: 100%;
-    min-height: 150px;
-    display: block;
-    opacity: .5;
-    transition-duration: 1s;
-}
-
 
 .item-3 {
     background-image: url("./images/coming-soon-construction-yellow-background-design_1017-25509.jpg");
@@ -247,8 +221,7 @@ header nav ul li a:hover {
     grid-row: 2 /span 1;
     position: relative;
     background-size: cover;
-    opacity: .5;
-    transition-duration: 1s;
+    
 }
 .item-3:hover {
     opacity: 1;
@@ -258,12 +231,11 @@ header nav ul li a:hover {
 
 .item-4 {
     background-image: url("./images/coming-soon-construction-yellow-background-design_1017-25509.jpg");
-    grid-column: 3 / span 1;
+    grid-column: 1 / span 1;
     grid-row: 3 / span 1;
     position: relative;
     background-size: cover;
-    opacity: .5;
-    transition-duration: 1s;
+   
 }
 .item-4:hover {
     opacity: 1;
@@ -276,20 +248,41 @@ header nav ul li a:hover {
     grid-column: 2 / span 1;
     grid-row: 3 / span 1;
     position: relative;
-    opacity: .5;
-    transition-duration: 1s;
+   
 }
 .item-5:hover {
     opacity: 1;
     background-color: none;
 }
-
-.grid-text-float {
-    float: left;
-    margin-top: 20px;
+.item-6 {
+    background-image: url("./images/coming-soon-construction-yellow-background-design_1017-25509.jpg");
+    background-size: cover;
+    grid-column: 3 / span 1;
+    grid-row: 3 / span 1;
+    position: relative;
+  
 }
 
-/* end grid */
+.item-6:hover {
+    opacity: 1;
+    background-color: none;
+}
+.item-text {
+    display:flex;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 50px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 200px;
+    left: 0;
+    background-color: var(--background);
+    top: 50%;
+    text-decoration: none;
+    opacity: 1;
+}
+
 
 
 .contact ul{
@@ -299,9 +292,9 @@ header nav ul li a:hover {
     justify-content: space-between;
     height: 150px;
     flex-wrap: wrap;
-    /* padding: 35px 35px; */
     width: 100%;
     list-style: none;  
+    margin-right: 110px;
 }
 
 .contact ul li {
@@ -310,11 +303,11 @@ header nav ul li a:hover {
     list-style: none;
     font-size: 20px;
     font-weight: bolder;
-    margin: 0 50px ;
+    margin: 0 0 0 55px ;
     justify-content: center;
     align-items: center;
     list-style: none;
-    text-decoration: none;
+    text-decoration: underline;
     padding: 0 15px;
 }
 
@@ -330,7 +323,7 @@ header nav ul li a:hover {
 }
     
 
-@media screen and(max-width: 980px) {
+@media screen and(max-width: 768px) {
     .work-grid-container {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(1, 1fr); 
