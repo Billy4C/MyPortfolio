@@ -1,6 +1,6 @@
 
 :root {
-    --darker:#363672a4;
+    --darker:#03031ba4;
     --lighter:#93dcdf;
     --white:white;  
     --background: #e2ccf3; 
@@ -24,11 +24,11 @@ header {
     background-image: fixed;
     background-position: 100%;
     padding: 35px 35px;
-    /*position: sticky;
-    position:-webkit-sticky;*/
+    position: sticky;
+    position:-webkit-sticky;
     z-index: 9999;
     top: 0;
-    color: var(--lighter);
+    color: var(--background);
     
 }
 
@@ -176,31 +176,34 @@ header nav ul li a:hover {
     padding-top: 20px;
     padding-bottom: 20px;
     transition-duration: 2s;
+    background-color: var(--lighter);
 }
 
 .grid-item-text:hover {
-    background-color: black;
+    background-color:white;
     opacity: .8;
 }
 
 .item-1 {
+    display: flex;
     background-image: url("./images/Runbuddylanding.png");
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
-    /*background-image: url(./images/Screen\ Shot\ 2020-08-05\ at\ 9.00.14\ PM.jpeg);*/
     background-size: cover;
     position: relative;
-    /* display: flex; */
-    /*justify-content: flex-start;
-    align-items: flex-end;
-    font-size: 50px;
-    font-weight: bold;
-    color: var(--darker);
-    background: var(--background)*/
     display: block;
     width: 100%;
     min-height: 300px;
-    /* background-size: 100%; */
+    opacity: .5;
+    transition-duration: 1s;
+    background-color: var(--white);
+    text-align: center;
+    align-items: flex-end;
+}
+
+.item-1:hover {
+    opacity: 1;
+    background-color: none;
 }
 
 
@@ -220,15 +223,23 @@ header nav ul li a:hover {
     grid-row: 1 /span 1; 
     position: relative;
     background-size: cover;
-  
+    opacity: .5;
+    transition-duration: 1s;
 }
+.item-2:hover {
+    opacity: 1;
+    background-color: none;
+}
+
 
 .item-2, .item-3, .item-4 img, .item-5 {
     width: 100%;
     min-height: 150px;
     display: block;
-
+    opacity: .5;
+    transition-duration: 1s;
 }
+
 
 .item-3 {
     background-image: url("./images/coming-soon-construction-yellow-background-design_1017-25509.jpg");
@@ -236,15 +247,14 @@ header nav ul li a:hover {
     grid-row: 2 /span 1;
     position: relative;
     background-size: cover;
-
+    opacity: .5;
+    transition-duration: 1s;
+}
+.item-3:hover {
+    opacity: 1;
+    background-color: none;
 }
 
-/*.item-3 img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-*/
 
 .item-4 {
     background-image: url("./images/coming-soon-construction-yellow-background-design_1017-25509.jpg");
@@ -252,8 +262,12 @@ header nav ul li a:hover {
     grid-row: 3 / span 1;
     position: relative;
     background-size: cover;
-
-
+    opacity: .5;
+    transition-duration: 1s;
+}
+.item-4:hover {
+    opacity: 1;
+    background-color: none;
 }
 
 .item-5 {
@@ -262,7 +276,12 @@ header nav ul li a:hover {
     grid-column: 2 / span 1;
     grid-row: 3 / span 1;
     position: relative;
-
+    opacity: .5;
+    transition-duration: 1s;
+}
+.item-5:hover {
+    opacity: 1;
+    background-color: none;
 }
 
 .grid-text-float {
@@ -305,15 +324,50 @@ header nav ul li a:hover {
 }
 
 .contact a:hover {
-    color: var(--white)
+    color: var(--white);
+    background-color: var(--darker);
+    border-radius: 15px;
 }
     
 
-@media screen and(max-width: 800px) {
+@media screen and(max-width: 980px) {
     .work-grid-container {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(1, 1fr); 
         padding: 0 10px;
     }
+    header h1 {
+        text-align: center;
+        width: 100%;
+    }
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    header nav ul li {
+        font-size: 20px;
+    }
+
+    .contact ul {
+        text-align: center;
+        width:100%;
+    }
+    .hero-text {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+@media screen and(max-width: 768px) {
+    .grid-item-text {
+        flex:100%
+    }
+
+}
+
+@media screen and(max-width: 600px) {
 
 }
