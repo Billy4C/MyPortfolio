@@ -110,7 +110,9 @@ h2 {
     padding: 0 10px;
    text-align: right;
 }
-
+.personal  {
+    display:flex;   
+}
 .personal-info {
     display: flex;
     position: relative;
@@ -393,7 +395,7 @@ h2 {
 @media screen and (max-width: 375px) {
     header {
         width: 100%;
-        padding: 0 20px 0 0;
+        padding: 0 40px 0 0;
         justify-content: center;
         position:sticky;
         position: -webkit-sticky;
@@ -401,5 +403,43 @@ h2 {
     header h1 {
         width:100%;
     }
-}
 
+    .hero {
+        margin-right: 10px;
+    }
+
+    h2 {
+       flex-wrap: nowrap;
+    }
+    .personal-info {
+        writing-mode: horizontal-lr;
+    }
+
+    .work-grid-container {
+        grid-column: 1 / -1;
+        grid-row: -1;
+        padding: 0;
+    }
+
+    #about-me, #work, #contact-me {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding:50px;
+        /* flex-flow: row ; */
+    }
+
+    .personal-info, .work-grid-container, .contact ul {
+        border: none;
+        align-items:  center;
+    }
+    h2 {
+        text-align: center;
+    }
+
+    .contact ul {
+        width:100%;
+        display: block;
+        padding: 5px;
+    }
+}
